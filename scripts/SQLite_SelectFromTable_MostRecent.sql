@@ -40,8 +40,7 @@ SELECT
 	printf('"Humidity":%lf}', Humidity)
 FROM WeatherCapeTable
 ORDER BY UtcUnixEpoch DESC
-LIMIT 1
-;
+LIMIT 1;
 SELECT printf(']');
 
 /*
