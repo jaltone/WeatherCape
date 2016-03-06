@@ -37,8 +37,11 @@ SELECT
 	printf('"AmbientLight":%ld,', AmbientLight),
 	printf('"Pressure":%lf,', Pressure),
 	printf('"Temperature":%lf,', Temperature),
-	printf('"Humidity":%lf},', Humidity)
-FROM WeatherCapeTable;
+	printf('"Humidity":%lf}', Humidity)
+FROM WeatherCapeTable
+ORDER BY UtcUnixEpoch DESC
+LIMIT 1
+;
 SELECT printf(']');
 
 /*
