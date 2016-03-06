@@ -1,7 +1,7 @@
 # WeatherCape
 
 Change Log
-==========
+----------
 
 2016.03.05
 Added Temperature and Humidity readings from HTU21D sensor.
