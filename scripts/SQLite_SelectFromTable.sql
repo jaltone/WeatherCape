@@ -4,6 +4,7 @@
  * License: Attribution-ShareAlike 4.0 International, https://creativecommons.org/licenses/by-sa/4.0/
  * Purpose: SQL Commands for SQLite.
  * History: 2016.01.16 Alexander Cerna: Inception.
+ *          2016.03.05 Alexander Cerna: Added Humidity.
  ****************************************************************************************************
  */
 
@@ -35,7 +36,8 @@ SELECT
 	printf('"LocalTimeStamp":"%s",', strftime('%Y-%m-%dT%H:%M:%S',UtcUnixEpoch,'unixepoch','localtime')),
 	printf('"AmbientLight":%ld,', AmbientLight),
 	printf('"Pressure":%lf,', Pressure),
-	printf('"Temperature":%lf},', Temperature)
+	printf('"Temperature":%lf},', Temperature),
+	printf('"Humidity":%lf},', Humidity)
 FROM WeatherCapeTable;
 SELECT printf(']');
 

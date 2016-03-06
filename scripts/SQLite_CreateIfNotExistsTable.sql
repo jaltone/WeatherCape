@@ -4,6 +4,7 @@
  * License: Attribution-ShareAlike 4.0 International, https://creativecommons.org/licenses/by-sa/4.0/
  * Purpose: SQL Commands for SQLite.
  * History: 2016.01.16 Alexander Cerna: Inception.
+ *          2016.03.05 Alexander Cerna: Added Humidity.
  ****************************************************************************************************
  */
 
@@ -19,7 +20,8 @@ CREATE TABLE IF NOT EXISTS WeatherCapeTable(
 	AmbientLight INTEGER NOT NULL,
 	Pressure REAL NOT NULL,
 	Temperature REAL NOT NULL,
-	PRIMARY KEY (UtcUnixEpoch, AmbientLight, Pressure, Temperature) ON CONFLICT REPLACE
+	Humidity REAL NOT NULL,
+	PRIMARY KEY (UtcUnixEpoch, AmbientLight, Pressure, Temperature, Humidity) ON CONFLICT REPLACE
 ) WITHOUT ROWID;
 COMMIT;
 
